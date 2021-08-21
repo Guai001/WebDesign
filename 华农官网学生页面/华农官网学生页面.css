@@ -1,0 +1,412 @@
+/* 华中农业大学官网 Created by 怪&/LS_GUAI*/
+
+*{
+    margin:0;/*外边距*/
+    padding:0;/*内边距*/
+}
+
+body{
+    font-size:20px; /*body 文本默认大小*/
+}
+
+/*----------------------------------------------    header：顶部导航栏  -------------------------------------------------*/
+.header{/*顶部导航栏*/
+    background-color: green;
+    height:50px;
+    width: 100%;
+}
+
+.header ul{/*列表*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header ul li{
+    float:left;
+}
+.header ul a{
+    display: block;
+    color:white;
+    text-align:center;
+    font-size:15px;
+    padding:14px 16px;
+    text-decoration: none;
+}
+
+.header ul a:hover{
+    background-color: tan;
+}
+
+.header ul .left{/*列表左部*/
+    margin-left:200px;
+    float:left;
+}
+
+.header ul .right{/*列表右部*/
+    margin-right:200px;
+    float:right;
+}
+
+/*----------------------------------------------    header1：顶部第二导航栏  -------------------------------------------------*/
+
+
+.header1{/*header容器设置*/
+    background-color:white;
+    height:150px;
+    margin:auto;
+    margin-left: 200px;
+}
+
+.header1 img{/*图片设置*/
+    width:300px;
+    height:100px;
+}
+
+.header1 .line{/*图片下边框线*/
+    border-top:1px solid brown;
+    width:1120px;
+}
+
+.header1 ul{/*列表*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header1 ul li{
+    float:left;
+}
+
+.header1 ul a{
+    display: block;
+    height:15px; 
+    width: 60px;
+    color:green;
+    background-color: white;
+    text-align:center;
+    font-size:14px;
+    padding:14px 16px; /*14 16*/
+    margin-left:20px;
+    text-decoration: none;
+}
+
+
+.header1 ul a:hover{
+    color:white;
+    background-color:green;
+}
+
+.header1 ul a:hover{
+    color:white;
+    background-color:green;
+}
+
+.header1 ul li .DrapdownWord{/*下拉菜单内容*/
+    display: none;/*平时不显示*/
+    position: absolute;
+}
+
+.header1 ul li:hover .DrapdownWord{/*鼠标放至li时，DrapdownWord以block展现*/
+    display: block;
+}
+
+.header1 ul li .DrapdownWord a{
+    display: block;
+    height:15px; 
+    width: 60px;
+    color:white;
+    background-color: green;
+    text-align:center;
+    font-size:12px;
+    padding:14px 16px;
+    margin-left:20px;
+    text-decoration: none;
+}
+
+.header1 ul li .DrapdownWord a:hover{
+    color:green;
+    background-color: tan;
+}
+
+.header1 ul li .DrapdownWord:hover .li{/*当鼠标放至DrapdownWord时，li的展现设置*/
+    color:white;
+    background-color: green;    
+}
+/*----------------------------------------------    content1：横长图设置  -------------------------------------------------*/
+
+.content1{
+    margin-top: 15px;
+    margin-left: 60px;
+    width:1400px;
+    height:300px;
+    background-color: white;
+}
+
+.content1 img{/*图片设置*/
+    width:1400px;
+    height:300px;
+}
+
+/*----------------------------------------------    content2设置  -------------------------------------------------*/
+
+.content2{/*content2容器盒子设置*/
+    padding-top:10px;
+    height: 1200px;
+    width:100%;
+    background-color: white;
+}
+/*------------------content2左部导航设置--------------------*/
+.content2 .left{
+    margin-left:190px;
+    float: left;
+    width:280px;
+    height:320px;
+    position: relative;
+    background-color: black;
+}
+
+.content2 .left .title{/*大标题“用户通道”设置*/
+    width:280px;
+    height:95px;
+    text-align:center;
+    font-size:40px;
+    padding-top: 30px;
+    color:white;
+    background-color:Tan;
+    border-bottom: 2px solid white;
+}
+
+.content2 .left .word{
+    width:260px;
+    height:30px;
+    font-size:15px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color:black;
+    background-color:Beige;
+    border-bottom: 2px solid white;
+    border-left: 2px solid 	LightGrey;
+}
+
+.content2 .left .word:hover{
+    cursor: pointer;
+    border-left: 2px solid green;
+}
+
+.content2 .left .word:hover a{
+    color:green;
+}
+
+.content2 .left .word a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+/*------------------content2右部设置--------------------*/
+.content2 .right{
+    float: left;
+    margin-left:40px;
+    width:850px;
+    height:1100px;
+    background-color: white;
+}
+.content2 .right .firstpart{/*content2右部横线分栏上部设置*/
+    float: left;
+    width:850px;
+    height:100px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom: 1px solid AntiqueWhite;
+}
+
+.content2 .right .firstpart .title{/*标题“title”设置*/
+    font-size:35px;
+    margin-top:15px;
+    color:green;
+}
+
+.content2 .right .firstpart a{
+    color:black;
+    font-size:15px;
+    text-decoration: none;
+}
+
+.content2 .right .firstpart a:hover{
+    color:green;
+}
+
+.content2 .right .secondpart{/*content2右部横线分栏下部设置，容器盒子*/
+    display: flex;
+    flex-flow: column;
+    margin-left: 40px;
+    width:800px;
+    height:1000px;
+    background-color: white;
+}
+
+.content2 .right .secondpart .title{/*标题分栏设置*/
+    width:800px;
+    height:30px;
+    font-size:15px;
+    padding-top: 8px;
+    padding-left: 8px;
+    margin-left: 8px;
+    color:ForestGreen;
+    background-color: WhiteSmoke;
+    margin-bottom: 5px;
+    border-bottom: 1px solid Silver;
+}
+
+.content2 .right .secondpart .title a{
+    text-decoration: none;
+    color:LimeGreen;
+}
+
+.content2 .right .secondpart .title a:hover{
+    color:	ForestGreen;
+}
+
+.content2 .right .secondpart .column1{/*内容分栏设置（占两行）*/
+    width:800px;
+    height:70px;
+    padding-left:5px;
+    padding-top: 10px;
+    margin-left: 8px;
+    background-color: white;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.content2 .right .secondpart .column1 .word{/*文字设置*/
+    width:200px;
+    height:25px;
+    font-size:15px;
+    background-color: white;
+    margin-right:60px ;
+    margin-top:2px;
+}
+
+.content2 .right .secondpart .column1 .word a{
+    text-decoration: none;
+    color:Tan;
+}
+
+.content2 .right .secondpart .column1 .word a:hover{
+    color:green;
+}
+
+.content2 .right .secondpart .column2{/*内容分栏设置（占一行）*/
+    width:800px;
+    height:40px;
+    padding-left:5px;
+    padding-top: 10px;
+    margin-left: 8px;
+    background-color: white;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.content2 .right .secondpart .column2 .word{/*文字设置*/
+    width:200px;
+    height:25px;
+    font-size:15px;
+    background-color: white;
+    margin-right:60px ;
+    margin-top:2px;
+}
+
+.content2 .right .secondpart .column2 .word a{
+    text-decoration: none;
+    color:Tan;
+}
+
+.content2 .right .secondpart .column2 .word a:hover{
+    color:green;
+}
+/*----------------------------------------------    footer1：底部第一导航设置  -------------------------------------------------*/
+.footer1{/*footer1*/
+    background-color:Beige;
+    height:315px;
+    width:100%;
+}
+
+.footer1 .total{/*footer1 容器盒子设置*/
+    margin-left: 200px;
+    width:1100px;
+    height:315px;
+    display: flex;/*flex*/
+    flex-flow:row nowrap;/*以行排列，不换行*/
+}
+
+.footer1 .total .part{/*footer1容器盒子内part设置*/
+    margin-left: 10px;
+    margin-top: 60px;
+    margin-right:10px;
+    width:90px;
+    height:255px;
+    display: flex;/*flex*/
+    flex-flow:column nowrap;/*以列排列，不换列*/
+}
+
+.footer1 .total .part .title{/*part内标题设置*/
+    font-size:15px;
+    margin-bottom:20px;
+    text-align: center;
+}
+
+.footer1 .total .part .title a{
+    color:black;
+    text-decoration: none;
+}
+
+.footer1 .total .part .title a:hover{
+    color:	LightSlateGray;
+}
+
+.footer1 .total .part .word{/*part内文字设置*/
+    font-size:12px;
+    margin-bottom:10px;
+    text-align:center
+}
+
+.footer1 .total .part .word a{
+    color:	DimGray;
+    text-decoration: none;
+}
+
+.footer1 .total .part .word a:hover{
+    color:	LightSlateGray;
+}
+
+/*----------------------------------------------    footer2：最底部信息备注  -------------------------------------------------*/
+.footer2{
+    background-color:green;
+    height:120px;
+    width:100%;
+}
+
+.footer2 .word{
+    padding-top:14px;
+    font-size:15px;
+    text-align:center;
+}
+
+.footer2 .word p{
+    color:white;
+    line-height: 35px;
+}
+
+.footer2 a{
+    color:white;
+    line-height: 35px;
+    text-decoration: none;
+}
+
+.footer2 a:hover{
+    color:Bisque;
+}

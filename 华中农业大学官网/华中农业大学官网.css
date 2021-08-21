@@ -1,0 +1,643 @@
+/* 华中农业大学官网 Created by 怪&/LS_GUAI*/
+
+*{
+    margin:0;/*外边距*/
+    padding:0;/*内边距*/
+}
+
+body{
+    font-size:20px; /*body 文本默认大小*/
+}
+
+/*----------------------------------------------    header：顶部导航  -------------------------------------------------*/
+.header{/*顶部导航栏*/
+    background-color: green;
+    height:50px;
+    width: 100%;
+}
+
+.header ul{/*列表*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header ul li{
+    float:left;
+}
+.header ul a{
+    display: block;
+    color:white;
+    text-align:center;
+    font-size:15px;
+    padding:14px 16px;
+    text-decoration: none;
+}
+
+.header ul a:hover{
+    background-color: tan;
+}
+
+.header ul .left{/*header左部列表*/
+    margin-left:200px;
+    float:left;
+}
+
+.header ul .right{/*header右部列表*/
+    margin-right:200px;
+    float:right;
+}
+
+/*----------------------------------------------    header1：顶部第二导航  -------------------------------------------------*/
+
+.header1{
+    background-color:white;
+    height:150px;
+    margin:auto;
+    margin-left: 200px;
+}
+
+.header1 img{/*图片设置*/
+    width:300px;
+    height:100px;
+}
+
+.header1 .line{/*设置图片下横线分栏*/
+    border-top:1px solid brown;
+    width:1120px;
+}
+
+.header1 ul{/*列表*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header1 ul li{
+    float:left;
+}
+
+.header1 ul a{
+    display: block;
+    height:15px; 
+    width: 60px;
+    color:green;
+    background-color: white;
+    text-align:center;
+    font-size:14px;
+    padding:14px 16px; /*14 16*/
+    margin-left:20px;
+    text-decoration: none;
+}
+
+
+.header1 ul a:hover{
+    color:white;
+    background-color:green;
+}
+
+.header1 ul li .DrapdownWord{/*列表下拉菜单内容*/
+    display: none;/*平时不显示*/
+    position: absolute;
+}
+
+.header1 ul li:hover .DrapdownWord{/*鼠标放至li时，DrapdownWord状态设置*/
+    display: block;
+}
+
+.header1 ul li .DrapdownWord a{
+    display: block;
+    height:15px; 
+    width: 60px;
+    color:white;
+    background-color: green;
+    text-align:center;
+    font-size:12px;
+    padding:14px 16px;
+    margin-left:20px;
+    text-decoration: none;
+}
+
+.header1 ul li .DrapdownWord a:hover{
+    color:green;
+    background-color: tan;
+}
+
+.header1 ul li .DrapdownWord:hover .li{/*鼠标放至DrapdownWord时，li状态设置*/
+    color:white;
+    background-color: green;    
+}
+
+/*----------------------------------------------    content1内容第一部分三图片轮播  -------------------------------------------------*/
+.content1{
+    height:450px;
+    width:100%;
+}
+
+.content1 #replay{/*设置放映容器*/
+    margin-left:90px;
+    width:100%;
+    height:450px;
+    overflow: hidden;
+}
+
+.content1 #replay>div{
+    width:300%;/*三个图，总300%*/
+    height:450px;
+    animation: replay 6s infinite;/*循环放映*/
+}
+
+.content1 #replay>div>div{
+    width:33.3%;/*此div占 “.content1 #replay>div”的33.3%*/
+    float:left;
+    height:450px;
+}
+
+.content1 #replay>div>div>img{
+    width:100%;
+    height:450px;
+}
+
+@keyframes replay{/*动画三等均分*/
+    0%{
+        margin-left: 0;
+    }
+    20%{
+        margin-left: 0;
+    }
+    40%{
+        margin-left: -100%;
+    }
+    60%{
+        margin-left: -100%;
+    }
+    80%{
+        margin-left: calc(-100% * 2);
+    }
+    100%{
+        margin-left: calc(-100% * 2);
+    }
+}
+
+/*-----------------    content2：内容第二部分 1、left：新闻聚焦； 2、right1：活动预告；  3、right2：媒体华农  --------------------*/
+.content2{/*content总体设置*/
+    background-color:white;
+    height:760px;
+    width:100%;
+    display: flex;/*flex布局*/
+    flex-direction: column;/*以列排列*/
+    flex-wrap: wrap;
+    align-content: flex-start;/*与交叉轴的起点对齐（顶部对齐）；*/
+}
+
+
+.content2  .title{/*content2 大标题统一设置 “新闻聚焦、活动预告、媒体华农” */
+    height:70px;
+    border-bottom: 1px green solid ;
+
+}
+.content2  .title .word{/*title文字*/
+    float:left;
+    color:green;
+    font-size:25px;
+    margin-top:30px;
+}
+
+.content2  .title .english{/*title旁英文*/
+    float:left;
+    margin-left:5px;
+    margin-top:40px;
+    font-size:15px;
+    color:brown;
+}
+.content2  .title a{
+    margin-top:40px;
+    float:right;
+    text-decoration: none;
+    color:black;
+    font-size:10px;
+}
+
+.content2 .title a:hover{
+    color:green;
+}
+
+/*---------------------------------------content2左部分-----------------------------------*/
+.content2 .left{/*content 左部分*/
+    box-sizing: border-box;
+    margin-left:200px;
+    background-color:white;
+    height: 760px;
+    width:700px;
+}
+
+.content2 .left .total{/*设置除去大标题空间的容器盒子*/
+    box-sizing: border-box;
+    background-color: white;
+    display:flex;/*flex布局*/
+    flex-flow:row wrap;/*以行排列，穷尽换行*/
+    width:100%;
+    height:680px;
+}
+
+.content2 .left .total .part{/*设置每一部分，共六部分*/
+    margin-left:10px;
+    box-sizing: border-box;
+    background-color:white ;
+    width:48%;
+    height:30%;
+}
+
+.content2 .left .total .part:hover{/*设置鼠标放至part时，背景颜色为白烟色*/
+    background-color: WhiteSmoke;
+}
+
+.content2 .left .total .time{/*每一部分的时间设置，例：“2021-08-18”*/
+    margin-top: 10px;
+    color:tan;
+    font-size:15px;
+}
+
+.content2 .left .total .part img{/*每一部分的图片设置*/
+    width:100%;
+    height: 140px;
+}
+
+.content2 .left .total .title1{/*每一部分的标题设置*/
+    margin-top: 10px;
+}
+
+.content2 .left .total .title1 a{
+    color:black;
+    font-size:15px;
+    text-decoration: none;
+}
+
+.content2 .left .total .title1 a:hover{
+    color:green;
+}
+
+.content2 .left .total .word{/*每一部分的文字设置*/
+    margin-top:20px;
+}
+
+.content2 .left .total .word a{
+    color:	DarkGray;
+    font-size:13px;
+    text-decoration: none;
+}
+
+.content2 .left .total .word a:hover{
+    color:tan;
+}
+
+/*---------------------------------------content2右上部分-----------------------------------*/
+.content2 .right1 {/*content2 右上部分*/
+    box-sizing: border-box;
+    margin-left:40px;
+    background-color: white;
+    height:325px;
+    width:380px;
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+.content2 .right1 .box{/*content2 除去“活动预告”标题空间的容器盒子*/
+    height:255px;
+    width:380px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.content2 .right1 .box .part{/*content2 右上部分每一小part*/
+    box-sizing: border-box;
+    margin-top: 0px;
+    width:100%;
+    height:81px;/*81*/
+    background-color: white;
+    border-bottom:1px solid Gainsboro;
+}
+
+
+.content2 .right1 .box .part img{/*part的图片设置*/
+    width:40px;
+    height:35px;
+    float:left;
+}
+
+.content2 .right1 .box .part .time{/*part的时间设置*/
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    color:DarkGray;
+    float: right;
+    cursor:pointer;/*鼠标悬停呈现手状*/
+}
+
+.content2 .right1 .box .part .title2{/*part标题设置*/
+    margin-top: 43px;
+    margin-left: 10px;
+}
+
+.content2 .right1 .box .part .title2 a{
+    color:black;
+    font-size:15px;
+    text-decoration: none;
+}
+
+.content2 .right1 .box .part .title2 a:hover{
+    color:green;
+}
+
+.content2 .right1 .box .DrapPart{/*当鼠标放至box时，向下延伸隐藏盒子设置*/
+    box-sizing: border-box;
+    height:400px;
+    width:382px;
+    margin-left: -1px;
+    margin-top:255px;/*315*/
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding-top:0px;
+    border-left: 1px solid 	DarkGray;
+    border-right: 1px solid 	DarkGray;
+    border-bottom: 1px solid 	DarkGray;
+}
+
+.content2 .right1 .box:hover{/*鼠标放至box时，为box加左右边框     注意right1和hover中间不能有空格*/
+    border-left: 1px solid 	DarkGray;
+    border-right: 1px solid 	DarkGray;
+}
+
+
+.content2 .right1 .box:hover  .DrapPart{/*鼠标放至box时，DrapPart以flex展示，竖列，不换列*/
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.content2 .right1 .box .DrapPart .DrapDown{/*当鼠标放至box时，向下延伸隐藏盒子DrapPart每一隐藏部分DrapDown设置*/
+    box-sizing: border-box;
+    width:100%;
+    height:81px;/*26%*/
+    border-bottom:1px solid Gainsboro;
+}
+
+
+.content2 .right1 .box .DrapPart .DrapDown img{/*图片设置*/
+    width:40px;
+    height:35px;
+    float:left;
+}
+
+.content2 .right1 .box .DrapPart .DrapDown .time22{/*时间设置*/
+    margin-top: 10px;
+    font-size: 15px;
+    margin-right: 10px;
+    color:DarkGray;
+    float: right;
+    cursor:pointer;/*鼠标悬停呈现手状*/
+}
+
+.content2 .right1 .box .DrapPart .DrapDown .title22{/*标题设置*/
+    margin-top: 43px;
+    margin-left: 10px;
+}
+
+.content2 .right1 .box .DrapPart .DrapDown .title22 a{
+    color:black;
+    font-size:15px;
+    text-decoration: none;
+}
+
+.content2 .right1 .box .DrapPart .DrapDown .title22 a:hover{
+    color:green;
+}
+
+
+.content2 .right1 .box .DrapPart .word{/*DrapPart最底部“ 更多 ”两字的特殊设置*/
+    margin-top: 20px;
+    margin-right: 10px;
+    background-color:white;
+}
+
+.content2 .right1 .box .DrapPart .word a{
+    color:black;
+    float: right;
+    text-decoration: none;
+    font-size:15px;
+}
+
+.content2 .right1 .box .DrapPart .word a:hover{
+    color:green;
+}
+
+/*---------------------------------------content右下部分-----------------------------------*/
+.content2 .right2{/*content 2 右下部分容器盒子*/
+    box-sizing: border-box;
+    margin-left:40px;
+    background-color: white;
+    height:425px;
+    width:380px;
+    display:flex;
+    flex-flow:column nowrap;
+}
+
+.content2 .right2 .part{/*content2 右下部分容器盒子内part设置*/
+    box-sizing: border-box;
+    background-color: white;
+    width:100%;
+    height:22%;
+    border-bottom:1px solid Gainsboro;
+}
+
+.content2 .right2 .part img{/*图片设置*/
+    width:40px;
+    height:35px;
+    float:left;
+}
+
+.content2 .right2 .part .webset{/*著明网址设置*/
+    font-size:15px;
+    margin-top: 10px;
+    float:left;
+    color:tan;
+}
+
+.content2 .right2 .part .time{/*时间设置*/
+    margin-top: 10px;
+    font-size: 15px;
+    color:DarkGray;
+    float: right;
+    cursor:pointer;/*鼠标悬停呈现手状*/
+}
+
+.content2 .right2 .part .title2{
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+.content2 .right2 .part .title2 a{
+    color:black;
+    font-size:17px;
+    text-decoration: none;
+}
+
+.content2 .right2 .part .title2 a:hover{
+    color:green;
+}
+/*----------------------------------------------    content3：内容第三部分三幅图片  -------------------------------------------------*/
+.content3{
+    background-color:green;
+    height:430px;
+    width:100%;
+}
+
+.content3 .total{/*盛放三图片容器盒子*/
+    margin-top:80px;
+    margin-left: 220px;
+    width:1080px;
+    height:430px;
+    background-color:green;
+    display: flex;
+    flex-flow:row nowrap;/*以行排列，不换行*/
+}
+
+.content3 .total .part{/*每一部分设置*/
+    margin-top:50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width:600px;
+    height:330px ;
+    background-color: white;
+}
+
+.content3 .total .part img{/*图片设置*/
+    margin-left:10px;
+    margin-top:10px;
+    width:300px;
+    height: 150px;
+}
+
+.content3 .total .part img:hover{
+    opacity:0.4;/*图片透明度*/
+}
+
+.content3 .total .part .title{/*标题设置*/
+    color:black;
+    margin-left:10px;
+    margin-top:10px;
+    font-size: 15px;
+}
+
+.content3 .total .part  a{
+    color:black;
+    text-decoration: none;
+}
+
+.content3 .total .part  a:hover{
+    color:green;
+}
+
+.content3 .total .part .word{/*内容简介设置*/
+    color:Gray;
+    margin-left:10px;
+    margin-top:30px;
+    font-size: 14px;
+}
+
+.content3 .total .part .border{/*详情按钮设置*/
+    color:white;
+    border-radius: 2px;
+    background-color:BurlyWood;
+    margin-left:5px;
+    padding:3px 3px 3px 3px;/*上 右 下 左*/
+    width:25px;
+    font-size: 10px;
+    float: left;
+    cursor: pointer;
+}
+/*----------------------------------------------    footer1：底部第一导航  -------------------------------------------------*/
+.footer1{/*footer1*/
+    background-color:Beige;
+    height:315px;
+    width:100%;
+}
+
+.footer1 .total{/*footer1 容器盒子*/
+    margin-left: 200px;
+    width:1100px;
+    height:315px;
+    display: flex;/*flex*/
+    flex-flow:row nowrap;/*以行排列，不换行*/
+}
+
+.footer1 .total .part{/*footer容器内part*/
+    margin-left: 10px;
+    margin-top: 60px;
+    margin-right:10px;
+    width:90px;
+    height:255px;
+    display: flex;/*flex*/
+    flex-flow:column nowrap;/*以列排列，不换列*/
+}
+
+.footer1 .total .part .title{/*footer容器内part 标题*/
+    font-size:15px;
+    margin-bottom:20px;
+    text-align: center;
+}
+
+.footer1 .total .part .title a{
+    color:black;
+    text-decoration: none;
+}
+
+.footer1 .total .part .title a:hover{
+    color:	LightSlateGray;
+}
+
+.footer1 .total .part .word{/*footer容器内part 文字*/
+    font-size:12px;
+    margin-bottom:10px;
+    text-align:center
+}
+
+.footer1 .total .part .word a{
+    color:	DimGray;
+    text-decoration: none;
+}
+
+.footer1 .total .part .word a:hover{
+    color:	LightSlateGray;
+}
+
+/*----------------------------------------------    footer2：底部第二导航  -------------------------------------------------*/
+.footer2{
+    background-color:green;
+    height:120px;
+    width:100%;
+}
+
+.footer2 .word{/*文字设置*/
+    padding-top:14px;
+    font-size:15px;
+    text-align:center;
+}
+
+.footer2 .word p{
+    color:white;
+    line-height: 35px;
+}
+
+.footer2 a{
+    color:white;
+    line-height: 35px;
+    text-decoration: none;
+}
+
+.footer2 a:hover{
+    color:	Bisque;
+}
